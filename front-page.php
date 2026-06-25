@@ -80,27 +80,37 @@
                 $query = new WP_Query(['post_type' => 'post', 'posts_per_page' => 6]);
                 while ($query->have_posts()) : $query->the_post(); ?>
                     
-                    <div class="swiper-slide h-auto"> <div class="bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl">
-                            <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
-                                <?php endif; ?>
-                            </div>
-                            <div class="p-6 flex flex-col justify-between flex-grow space-y-4">
-                                <div>
-                                    <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
-                                        <?php the_title(); ?>
-                                    </h3>
-                                    <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
-                                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
-                                    </p>
-                                </div>
-                                <a href="<?php the_permalink(); ?>" class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
-                                    Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
-                                </a>
-                            </div>
-                        </div>
+             <div class="swiper-slide h-auto p-2 overflow-visible"> 
+                <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
+                    <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5">
+                        <?php if (has_post_thumbnail()) : ?>
+                            <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
+                        <?php endif; ?>
                     </div>
+                    
+                    <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
+                        <div class="p-6">
+                            <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
+                                <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
+                            </div>
+
+                            <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
+                                <?php the_title(); ?>
+                            </h3>
+                            
+                            <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
+                                <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                            </p>
+                        </div>
+                        
+                        <div class="px-6 pb-6 mt-auto">
+                            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
+                                Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
+                            </span>
+                        </div>
+                    </a>
+                </div>
+            </div>
 
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
