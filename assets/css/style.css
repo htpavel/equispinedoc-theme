@@ -1,0 +1,36 @@
+/* Styling formuláře */
+.contact-form-wrapper .wpcf7-form-control {
+    width: 100%;
+    padding: 0.75rem 1rem;
+    border-radius: 0.75rem;
+    border: 1px solid rgba(44, 62, 80, 0.1);
+    margin-bottom: 0.5rem; /* Menší mezera pod poli */
+    background-color: white;
+}
+
+/* Odsazení bloku se souhlasem, aby nepřekrýval tlačítko */
+.contact-form-wrapper .wpcf7-acceptance {
+    display: block;
+    margin: 1.5rem 0; /* Zvětšuje prostor nad a pod souhlasem */
+    padding: 0.5rem 0;
+}
+
+.contact-form-wrapper .wpcf7-submit {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.75rem;
+    background-color: #A3B18A;
+    color: white;
+    font-weight: 600;
+    cursor: pointer;
+    border: none;
+    display: block;
+}
+
+/* Zajištění, aby chybové hlášky byly hezky pod poli a nepřekrývaly se */
+.wpcf7-not-valid-tip {
+    font-size: 0.8rem;
+    color: #e53e3e;
+    margin-bottom: 0.5rem;
+    display: block;
+}

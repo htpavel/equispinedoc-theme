@@ -92,9 +92,13 @@ document.addEventListener('DOMContentLoaded', function () {
         if (calcService && calcDistance && calcResult) {
             const servicePrice = parseInt(calcService.value, 10);
             const distance = parseInt(calcDistance.value, 10) || 0;
-            const travelPrice = distance * 12; // 12 Kč per km
+
+            // Změna: Vynásobíme vzdálenost dvěma (cesta tam i zpět)
+            const travelPrice = (distance * 2) * 12;
+
             const totalPrice = servicePrice + travelPrice;
 
+            // Formátování a výpis
             calcResult.textContent = totalPrice.toString().replace(/\B(?=(\d{3})+(?!\d))/g, " ");
         }
     }

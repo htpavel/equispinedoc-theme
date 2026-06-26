@@ -133,7 +133,7 @@
             <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 
                 <!-- Levý sloupec: Foto & Rychlé shrnutí -->
-                <div class="lg:col-span-4 space-y-8 sticky top-28">
+                <div class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
                     <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] bg-[#2C3E50]/5">
                         <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=800" alt="MVDr. Kateřina Černá" class="w-full h-full object-cover">
                         <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/60 via-transparent to-transparent"></div>
@@ -255,7 +255,7 @@
                                 </div>
                                 <div class="space-y-2">
                                     <div class="flex items-center gap-3 flex-wrap">
-                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">Německo</span>
+                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">2021</span>
                                         <h4 class="text-lg font-bold text-[#2C3E50]">IAVC Certifikovaná Chiropraktička pro Koně a Psy</h4>
                                     </div>
                                     <p class="text-sm text-[#4A5568]">
@@ -478,7 +478,7 @@
                             <div class="flex justify-between items-start gap-4">
                                 <div class="space-y-1">
                                     <h4 class="font-bold text-[#2C3E50]">Doprava / Dojezd ze stáje</h4>
-                                    <p class="text-sm text-[#4A5568]">Počítáno z mé základny v Heřmanově Městci (případně dle společných plánovaných okruhů).</p>
+                                    <p class="text-sm text-[#4A5568]">Počítáno z mé základny v Hrochově Týnci (případně dle společných plánovaných okruhů).</p>
                                 </div>
                                 <span class="font-heading text-xl font-bold text-[#A3B18A] whitespace-nowrap">12 Kč/km</span>
                             </div>
@@ -504,7 +504,7 @@
 
                         <!-- Dojezd -->
                         <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Předpokládaná vzdálenost ze stáje (Heřmanův Městec)</label>
+                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Předpokládaná vzdálenost ze sídla (Hrochův Týnec)</label>
                             <div class="relative">
                                 <input type="number" id="calc-distance" value="30" min="0" max="500" class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-transparent text-sm focus:outline-none focus:border-[#A3B18A] transition-soft">
                                 <span class="absolute right-4 top-1/2 -translate-y-1/2 text-sm text-[#4A5568]/60">km</span>
@@ -527,124 +527,100 @@
         </div>
     </section>
 
-    <!-- 7. KONTAKT -->
-    <section id="kontakt" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Jak se se mnou spojit</span>
-                <h2 class="text-4xl font-bold text-[#2C3E50]">Objednání & Dotazy</h2>
-                <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
-                <p class="text-lg text-[#4A5568]">
-                    Pokud máte dotaz k ošetření nebo chcete rovnou rezervovat termín pro svého koně, neváhejte mě kontaktovat.
-                </p>
+  <!-- 7. KONTAKT -->
+<section id="kontakt" class="py-24 bg-white">
+    <div class="max-w-7xl mx-auto px-6">
+        <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
+            <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Jak se se mnou spojit</span>
+            <h2 class="text-4xl font-bold text-[#2C3E50]">Objednání & Dotazy</h2>
+            <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
+            <p class="text-lg text-[#4A5568]">
+                Pokud máte dotaz k ošetření nebo chcete rovnou rezervovat termín pro svého koně, neváhejte mě kontaktovat.
+            </p>
+        </div>
+
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            
+            <!-- Informace a kontaktní údaje (Levá strana) -->
+            <div class="lg:col-span-5 space-y-8">
+                <div class="p-8 rounded-3xl bg-[#FAF9F6] border border-[#2C3E50]/5 space-y-6">
+                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Kontaktní údaje</h3>
+                    
+                    <div class="space-y-4 text-base text-[#4A5568]">
+                        <!-- Jméno a KVL -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                <i class="fa-solid fa-user"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Lékařka</span>
+                                <span class="block font-semibold text-[#2C3E50]">MVDr. Kateřina Černá</span>
+                                <span class="text-sm text-[#4A5568]">KVL 6391</span>
+                            </div>
+                        </div>
+
+                        <!-- Adresa a IČO -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                <i class="fa-solid fa-location-dot"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Sídlo</span>
+                                <span class="block font-semibold text-[#2C3E50]">Riegrova 434</span>
+                                <span class="block font-semibold text-[#2C3E50]">538 62 Hrochův Týnec</span>
+                                <span class="text-sm text-[#4A5568]">IČO: 03225283</span>
+                            </div>
+                        </div>
+
+                        <!-- Telefon -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Telefon</span>
+                                <a href="tel:+420721016678" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">+420 721 016 678</a>
+                            </div>
+                        </div>
+
+                        <!-- Email -->
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                <i class="fa-solid fa-envelope"></i>
+                            </div>
+                            <div>
+                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">E-mail</span>
+                                <a href="mailto:katerina.cerna@konskydoktor.cz" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">katerina.cerna@konskydoktor.cz</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Sociální sítě -->
+                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-[#2C3E50]/5">
+                        <span class="text-xs uppercase text-[#4A5568]/60 font-medium">Sledujte mě:</span>
+                        <div class="flex gap-3 relative z-10"> 
+                            <a href="https://www.facebook.com/vetchirocerna#" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
+                                <i class="fa-brands fa-facebook-f"></i>
+                            </a>
+                            <a href="https://www.instagram.com/p/DZb7soPlfgL/" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
+                                <i class="fa-brands fa-instagram"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
             </div>
 
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+            <!-- Kontaktní formulář (Pravá strana) -->
+                    <div class="lg:col-span-7 bg-[#FAF9F6] p-8 rounded-3xl border border-[#2C3E50]/5 shadow-sm">
+                <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Nezávazná poptávka ošetření</h3>
                 
-                <!-- Informace a kontaktní údaje (Levá strana) -->
-                <div class="lg:col-span-5 space-y-8">
-                    <div class="p-8 rounded-3xl bg-[#FAF9F6] border border-[#2C3E50]/5 space-y-6">
-                        <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Kontaktní údaje</h3>
-                        
-                        <div class="space-y-4 text-base text-[#4A5568]">
-                            <!-- Telefon -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                    <i class="fa-solid fa-phone"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Telefon</span>
-                                    <a href="tel:+420777123456" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">+420 777 123 456</a>
-                                </div>
-                            </div>
-
-                            <!-- Email -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                    <i class="fa-solid fa-envelope"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">E-mail</span>
-                                    <a href="mailto:katerina.cerna@equispinedoc.cz" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">katerina.cerna@equispinedoc.cz</a>
-                                </div>
-                            </div>
-
-                            <!-- Působnost -->
-                            <div class="flex items-start gap-4">
-                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                    <i class="fa-solid fa-location-dot"></i>
-                                </div>
-                                <div>
-                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Působnost</span>
-                                    <span class="font-semibold text-[#2C3E50]">Mobilní terénní praxe</span>
-                                    <p class="text-sm text-[#4A5568] mt-1">Základna v Heřmanově Městci. Dojíždím po celé České republice (pravidelné trasy a okruhy).</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
+                <!-- Formulář -->
+                <div class="contact-form-wrapper">
+                    <?php echo do_shortcode('[contact-form-7 id="698740d"]'); ?>
                 </div>
-
-                <!-- Kontaktní formulář (Pravá strana) -->
-                <div class="lg:col-span-7 bg-[#FAF9F6] p-8 rounded-3xl border border-[#2C3E50]/5 shadow-sm">
-                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Nezávazná poptávka ošetření</h3>
-                    
-                    <form id="contact-form" class="space-y-6" onsubmit="handleFormSubmit(event)">
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <!-- Jméno -->
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Vaše jméno a příjmení</label>
-                                <input type="text" required class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-white text-sm focus:outline-none focus:border-[#A3B18A] transition-soft">
-                            </div>
-                            <!-- Telefon -->
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Telefonní kontakt</label>
-                                <input type="tel" required class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-white text-sm focus:outline-none focus:border-[#A3B18A] transition-soft">
-                            </div>
-                        </div>
-
-                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-                            <!-- E-mail -->
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">E-mailová adresa</label>
-                                <input type="email" required class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-white text-sm focus:outline-none focus:border-[#A3B18A] transition-soft">
-                            </div>
-                            <!-- Lokalita stáje -->
-                            <div>
-                                <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Lokalita stáje / Adresa</label>
-                                <input type="text" required placeholder="Např. Heřmanův Městec" class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-white text-sm focus:outline-none focus:border-[#A3B18A] transition-soft">
-                            </div>
-                        </div>
-
-                        <!-- Zpráva -->
-                        <div>
-                            <label class="block text-xs font-semibold uppercase tracking-wider text-[#4A5568]/60 mb-2">Popište stručně potíže vašeho koně</label>
-                            <textarea rows="4" required class="w-full px-4 py-3 rounded-xl border border-[#2C3E50]/10 bg-white text-sm focus:outline-none focus:border-[#A3B18A] transition-soft"></textarea>
-                        </div>
-
-                        <!-- Ochrana osobních údajů -->
-                        <div class="flex items-start gap-3">
-                            <input type="checkbox" required id="gdpr-checkbox" class="mt-1 h-4 w-4 rounded border-[#2C3E50]/10 text-[#A3B18A] focus:ring-[#A3B18A]">
-                            <label for="gdpr-checkbox" class="text-xs text-[#4A5568] leading-relaxed">
-                                Souhlasím se zpracováním osobních údajů za účelem vyřízení mé poptávky a koordinace příjezdu.
-                            </label>
-                        </div>
-
-                        <!-- Odeslat -->
-                        <button type="submit" class="w-full py-4 rounded-xl bg-[#A3B18A] text-white font-semibold hover:bg-[#8F9F76] shadow-md hover:shadow-lg transition-soft text-center">
-                            Odeslat nezávaznou poptávku
-                        </button>
-                    </form>
-
-                    <!-- Úspěšné odeslání zpráva -->
-                    <div id="form-success-message" class="hidden p-6 rounded-2xl bg-[#A3B18A]/10 text-[#2C3E50] border border-[#A3B18A]/30 text-center space-y-2 mt-6">
-                        <i class="fa-solid fa-circle-check text-4xl text-[#A3B18A]"></i>
-                        <h4 class="text-lg font-bold">Poptávka úspěšně odeslána!</h4>
-                        <p class="text-sm">Děkuji za vaši zprávu. Ozvu se vám co nejdříve, jakmile se vrátím z terénu od pacientů.</p>
-                    </div>
-                </div>
-
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
 <?php get_footer(); ?>
