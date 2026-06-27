@@ -84,26 +84,22 @@
                             <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
                                 
                                 <!-- Horní část karty s obrázkem nebo náhodnou ikonou -->
-                                <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5 flex items-center justify-center">
+                                <!-- Změněno z aspect-video na h-32 (nebo dle potřeby) -->
+                                <div class="h-32 relative overflow-hidden bg-[#2C3E50]/5 flex items-center justify-center">
                                     <?php if (has_post_thumbnail()) : ?>
                                         <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
                                     <?php else : ?>
                                         <?php 
-                                        // Definice rozšířeného pole ikon
-                                        $icons = [
-                                            'fa-notes-medical', 'fa-stethoscope', 'fa-paw', 'fa-heart-pulse', 
-                                            'fa-user-doctor', 'fa-bone', 'fa-horse', 'fa-briefcase-medical',
-                                            'fa-hand-holding-medical', 'fa-shield-dog'
-                                        ];
-                                        // Náhodný výběr
+                                        $icons = ['fa-notes-medical', 'fa-stethoscope', 'fa-paw', 'fa-heart-pulse', 'fa-user-doctor', 'fa-bone', 'fa-horse', 'fa-briefcase-medical', 'fa-hand-holding-medical', 'fa-shield-dog'];
                                         $random_icon = $icons[array_rand($icons)];
                                         ?>
-                                        <i class="fa-solid <?php echo $random_icon; ?> text-5xl text-[#2C3E50]/10"></i>
+                                        <!-- Zmenšeno z text-5xl na text-4xl -->
+                                        <i class="fa-solid <?php echo $random_icon; ?> text-4xl text-[#2C3E50]/10"></i>
                                     <?php endif; ?>
                                 </div>
                                 
-                                <!-- Odkaz na detail článku -->
-                                <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
+                              <!-- Odkaz na detail článku otevře se v nové kartě -->
+                                <a href="<?php the_permalink(); ?>" target="_blank" rel="noopener noreferrer" class="flex flex-col justify-between flex-grow">
                                     <div class="p-6">
                                         <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
                                             <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
@@ -240,70 +236,39 @@
     <!-- 4. SLUŽBY (CHIROPRAXE A DOPLŇKOVÉ METODY) -->
     <section id="sluzby" class="py-24 bg-[#FAF9F6]">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Specializace praxe</span>
-                <h2 class="text-4xl font-bold text-[#2C3E50]">Základní služby & metody</h2>
-                <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
-                <p class="text-lg text-[#4A5568]">
-                    Má praxe se úzce a plně soustředí pouze na veterinární chiropraxi a navazující doplňkové rehabilitační metody.
-                </p>
-            </div>
-
-            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-stretch">
+            <h2 class="text-4xl font-bold text-[#2C3E50] mb-16 text-center">Základní služby & metody</h2>
+            
+            <div class="grid md:grid-cols-3 gap-8">
                 
-                <!-- Služba 1: Chiropraxe -->
-                <div class="p-8 md:p-10 rounded-3xl bg-white border border-[#2C3E50]/5 hover:shadow-xl transition-soft flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="w-16 h-16 rounded-2xl bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-3xl">
-                            <i class="fa-solid fa-hands-holding"></i>
-                        </div>
-                        <h3 class="text-3xl font-bold text-[#2C3E50]">Veterinární chiropraxe</h3>
-                        <p class="text-[#4A5568] leading-relaxed text-base">
-                            Chiropraxe je manuální terapie zaměřená na zkoumání a obnovu plné pohyblivosti kloubních spojení, zejména na páteři koně. Cílem je odstranění tzv. funkčních blokád (subluxací), které negativně ovlivňují nervový systém a svalový aparát koně.
-                        </p>
-                        <ul class="space-y-3 text-sm text-[#4A5568]">
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#A3B18A]"></i> Odstranění ztuhlosti, asymetrií a bolestivosti</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#A3B18A]"></i> Zlepšení celkové ohebnosti a koordinace pohybu</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#A3B18A]"></i> Řešení náhlého zhoršení jezditelnosti</li>
-                            <li class="flex items-center gap-2"><i class="fa-solid fa-check text-[#A3B18A]"></i> Šetrná korekce s ohledem na psychiku a klid zvířete</li>
-                        </ul>
-                    </div>
-                </div>
+                <!-- Veterinární chiropraxe -->
+                <a href="/co-je-chiropraxe//" class="group block bg-white p-8 rounded-3xl border border-[#2C3E50]/5 transition-all hover:shadow-2xl hover:scale-[1.02]">
+                    <div class="text-4xl mb-6">🩺</div>
+                    <h3 class="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#A3B18A] transition-colors">Veterinární chiropraxe</h3>
+                    <p class="text-sm text-[#4A5568] leading-relaxed mb-6">Celostní přístup, diagnostika funkčních blokád páteře a šetrná manuální náprava pro koně a psy.</p>
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A]">
+                        Více informací <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
 
-                <!-- Služba 2: Doplňkové metody -->
-                <div class="p-8 md:p-10 rounded-3xl bg-white border border-[#2C3E50]/5 hover:shadow-xl transition-soft flex flex-col justify-between">
-                    <div class="space-y-6">
-                        <div class="w-16 h-16 rounded-2xl bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-3xl">
-                            <i class="fa-solid fa-kit-medical"></i>
-                        </div>
-                        <h3 class="text-3xl font-bold text-[#2C3E50]">Doplňkové metody</h3>
-                        <p class="text-[#4A5568] leading-relaxed text-base">
-                            Chiropraktické ošetření doplňuji o moderní rehabilitační postupy pro prodloužení a upevnění léčebného efektu na pohybovém aparátu.
-                        </p>
-                        
-                        <div class="space-y-4 pt-2">
-                            <!-- Kinesiotaping -->
-                            <div class="border-t border-[#2C3E50]/5 pt-4">
-                                <h4 class="text-lg font-bold text-[#2C3E50] flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#A3B18A]"></span> Kinesiotaping (CEKTT)
-                                </h4>
-                                <p class="text-sm text-[#4A5568] mt-1">
-                                    Aplikace elastických pásek, které jemně nadzvedávají kůži, stimulují lymfatický tok, tlumí bolest, uvolňují přetížené svalové skupiny nebo naopak podporují správnou svalovou aktivitu.
-                                </p>
-                            </div>
+                <!-- Kinesiotaping -->
+                <a href="/kinesiotaping/" class="group block bg-white p-8 rounded-3xl border border-[#2C3E50]/5 transition-all hover:shadow-2xl hover:scale-[1.02]">
+                    <div class="text-4xl mb-6">🌿</div>
+                    <h3 class="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#A3B18A] transition-colors">Kinesiotaping</h3>
+                    <p class="text-sm text-[#4A5568] leading-relaxed mb-6">Specializovaná aplikace elastických kineziotapů pro podporu biomechaniky a úlevu od bolesti u koní.</p>
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A]">
+                        Více informací <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
 
-                            <!-- Surefoot -->
-                            <div class="border-t border-[#2C3E50]/5 pt-4">
-                                <h4 class="text-lg font-bold text-[#2C3E50] flex items-center gap-2">
-                                    <span class="w-2 h-2 rounded-full bg-[#A3B18A]"></span> Surefoot podložky
-                                </h4>
-                                <p class="text-sm text-[#4A5568] mt-1">
-                                    Práce na speciálních balančních podložkách Surefoot, které koním poskytují možnost uvědomit si své těžiště, uvolnit chronické napětí v hlubokých svalech, zklidnit nervovou soustavu a výrazně zlepšit propriocepci.
-                                </p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <!-- SURE FOOT -->
+                <a href="/sure-foot/" class="group block bg-white p-8 rounded-3xl border border-[#2C3E50]/5 transition-all hover:shadow-2xl hover:scale-[1.02]">
+                    <div class="text-4xl mb-6">🐾</div>
+                    <h3 class="text-xl font-bold text-[#2C3E50] mb-3 group-hover:text-[#A3B18A] transition-colors">SURE FOOT Program</h3>
+                    <p class="text-sm text-[#4A5568] leading-relaxed mb-6">Vzdělávací program pro lepší stabilitu, propriocepci a psychickou pohodu vašeho koně.</p>
+                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A]">
+                        Více informací <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </span>
+                </a>
 
             </div>
         </div>
