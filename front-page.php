@@ -48,7 +48,7 @@
                 <div class="absolute inset-0 border-2 border-[#A3B18A]/30 rounded-3xl translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
                 
                 <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-[#2C3E50]/5">
-                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e6563?auto=format&fit=crop&q=80&w=1200" alt="Jemný dotek a chiropraktické ošetření koně" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                    <img src="https://konskydoktor.cz/wp-content/uploads/2021/10/kat_cerna-1.jpg" alt="Profilová fotografie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                     <!-- Jemný stín pro lepší hloubku -->
                     <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/20 via-transparent to-transparent"></div>
                 </div>
@@ -72,7 +72,7 @@
 <!-- 5.5 ČLÁNKY A AKTUALITY -->
 <section id="novinky" class="py-24 bg-white">
     <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-[#2C3E50] mb-12 text-center">Články z praxe</h2>
+        <h2 class="text-4xl font-bold text-[#2C3E50] mb-12 text-center">Články z praxe & Aktuality</h2>
         
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
@@ -80,41 +80,57 @@
                 $query = new WP_Query(['post_type' => 'post', 'posts_per_page' => 6]);
                 while ($query->have_posts()) : $query->the_post(); ?>
                     
-             <div class="swiper-slide h-auto p-2 overflow-visible"> 
-                <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
-                    <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5">
-                        <?php if (has_post_thumbnail()) : ?>
-                            <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
-                        <?php endif; ?>
-                    </div>
-                    
-                    <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
-                        <div class="p-6">
-                            <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
-                                <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
-                            </div>
-
-                            <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
-                                <?php the_title(); ?>
-                            </h3>
+                    <div class="swiper-slide h-auto p-2 overflow-visible"> 
+                        <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
                             
-                            <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
-                                <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
-                            </p>
+                            <!-- Horní část karty s obrázkem nebo náhodnou ikonou -->
+                            <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5 flex items-center justify-center">
+                                <?php if (has_post_thumbnail()) : ?>
+                                    <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
+                                <?php else : ?>
+                                    <?php 
+                                    // Definice rozšířeného pole ikon
+                                    $icons = [
+                                        'fa-notes-medical', 'fa-stethoscope', 'fa-paw', 'fa-heart-pulse', 
+                                        'fa-user-doctor', 'fa-bone', 'fa-horse', 'fa-briefcase-medical',
+                                        'fa-hand-holding-medical', 'fa-shield-dog'
+                                    ];
+                                    // Náhodný výběr
+                                    $random_icon = $icons[array_rand($icons)];
+                                    ?>
+                                    <i class="fa-solid <?php echo $random_icon; ?> text-5xl text-[#2C3E50]/10"></i>
+                                <?php endif; ?>
+                            </div>
+                            
+                            <!-- Odkaz na detail článku -->
+                            <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
+                                <div class="p-6">
+                                    <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
+                                        <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
+                                    </div>
+
+                                    <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
+                                        <?php the_title(); ?>
+                                    </h3>
+                                    
+                                    <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
+                                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                                    </p>
+                                </div>
+                                
+                                <div class="px-6 pb-6 mt-auto">
+                                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
+                                        Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
+                                    </span>
+                                </div>
+                            </a>
                         </div>
-                        
-                        <div class="px-6 pb-6 mt-auto">
-                            <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
-                                Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
-                            </span>
-                        </div>
-                    </a>
-                </div>
-            </div>
+                    </div>
 
                 <?php endwhile; wp_reset_postdata(); ?>
             </div>
             
+            <!-- Swiper navigace -->
             <div class="swiper-button-next !text-[#A3B18A]"></div>
             <div class="swiper-button-prev !text-[#A3B18A]"></div>
         </div>
@@ -360,62 +376,33 @@
         </div>
     </section>
 
-    <!-- 5. GALERIE -->
-    <section id="galerie" class="py-24 bg-white">
+    <!-- GALERIE - ROZCESTNÍK -->
+        <section id="galerie" class="py-24 bg-white">
         <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Momenty z praxe</span>
-                <h2 class="text-4xl font-bold text-[#2C3E50]">Galerie naší spolupráce</h2>
-                <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
-                <p class="text-lg text-[#4A5568]">
-                    Uvolnění, klid a precizní diagnostika přímo v terénu u mých pacientů.
-                </p>
-            </div>
+            <h2 class="text-4xl font-bold text-[#2C3E50] text-center mb-16">Fotogalerie</h2>
 
-            <!-- Mřížka s fotografiami -->
-            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-                <!-- Foto 1 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=1200', 'Vyšetření páteře v klidném prostředí stáje')">
-                    <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=600" alt="Ošetření" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
-                <!-- Foto 2 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1598974357801-cbca100e6563?auto=format&fit=crop&q=80&w=1200', 'Důvěra a klidný přístup jako klíč k úspěchu')">
-                    <img src="https://images.unsplash.com/photo-1598974357801-cbca100e6563?auto=format&fit=crop&q=80&w=600" alt="Práce na koni" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
-                <!-- Foto 3 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=1200', 'Balanční cvičení a uvolnění hlubokého stabilizačního systému')">
-                    <img src="https://images.unsplash.com/photo-1601758228041-f3b2795255f1?auto=format&fit=crop&q=80&w=600" alt="Senzomotorika" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
-                <!-- Foto 4 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1534067783941-51c9c23eccfd?auto=format&fit=crop&q=80&w=1200', 'Detaily svalového tonu po chiropraktickém ošetření')">
-                    <img src="https://images.unsplash.com/photo-1534067783941-51c9c23eccfd?auto=format&fit=crop&q=80&w=600" alt="Uvolnění svalů" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
-                <!-- Foto 5 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1518467166-367ae630dd32?auto=format&fit=crop&q=80&w=1200', 'Biomechanika kopyt a stabilita ve stoji')">
-                    <img src="https://images.unsplash.com/photo-1518467166-367ae630dd32?auto=format&fit=crop&q=80&w=600" alt="Postoj koně" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
-                <!-- Foto 6 -->
-                <div class="group relative rounded-2xl overflow-hidden shadow-sm aspect-video bg-[#2C3E50]/5 cursor-pointer" onclick="openLightbox('https://images.unsplash.com/photo-1551884831-b590d8943df7?auto=format&fit=crop&q=80&w=1200', 'Spokojenost pacienta na závěr terapie')">
-                    <img src="https://images.unsplash.com/photo-1551884831-b590d8943df7?auto=format&fit=crop&q=80&w=600" alt="Kontakt s koněm" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <div class="absolute inset-0 bg-[#2C3E50]/20 opacity-0 group-hover:opacity-100 transition-soft flex items-center justify-center">
-                        <i class="fa-solid fa-magnifying-glass-plus text-white text-3xl"></i>
-                    </div>
-                </div>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-8">
+                
+                <!--1 . Kurz veterinární chiropraxe -->
+                <div class="bg-[#FAF9F6] rounded-3xl p-6 border border-[#2C3E50]/5 shadow-sm">
+                    <?php echo do_shortcode('[foogallery id="869"]'); ?>
+                </div>    
+            
+                <!-- 2. Chiropraktické ošetření koně -->
+                <div class="bg-[#FAF9F6] rounded-3xl p-6 border border-[#2C3E50]/5 shadow-sm">
+                    <?php echo do_shortcode('[foogallery id="871"]'); ?>
+                </div>   
+
+                <!-- 3. Chiropraktické ošetření psa -->
+                <div class="bg-[#FAF9F6] rounded-3xl p-6 border border-[#2C3E50]/5 shadow-sm">
+                    <?php echo do_shortcode('[foogallery id="872"]'); ?>
+                </div>   
+
+                <!-- 4. Chiropraktické ošetření koně (starší) -->
+                <div class="bg-[#FAF9F6] rounded-3xl p-6 border border-[#2C3E50]/5 shadow-sm">
+                    <?php echo do_shortcode('[foogallery id="873"]'); ?>
+                </div>   
+                
             </div>
         </div>
     </section>
@@ -528,99 +515,99 @@
     </section>
 
   <!-- 7. KONTAKT -->
-<section id="kontakt" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
-            <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Jak se se mnou spojit</span>
-            <h2 class="text-4xl font-bold text-[#2C3E50]">Objednání & Dotazy</h2>
-            <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
-            <p class="text-lg text-[#4A5568]">
-                Pokud máte dotaz k ošetření nebo chcete rovnou rezervovat termín pro svého koně, neváhejte mě kontaktovat.
-            </p>
-        </div>
-
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-            
-            <!-- Informace a kontaktní údaje (Levá strana) -->
-            <div class="lg:col-span-5 space-y-8">
-                <div class="p-8 rounded-3xl bg-[#FAF9F6] border border-[#2C3E50]/5 space-y-6">
-                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Kontaktní údaje</h3>
-                    
-                    <div class="space-y-4 text-base text-[#4A5568]">
-                        <!-- Jméno a KVL -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                <i class="fa-solid fa-user"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Lékařka</span>
-                                <span class="block font-semibold text-[#2C3E50]">MVDr. Kateřina Černá</span>
-                                <span class="text-sm text-[#4A5568]">KVL 6391</span>
-                            </div>
-                        </div>
-
-                        <!-- Adresa a IČO -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                <i class="fa-solid fa-location-dot"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Sídlo</span>
-                                <span class="block font-semibold text-[#2C3E50]">Riegrova 434</span>
-                                <span class="block font-semibold text-[#2C3E50]">538 62 Hrochův Týnec</span>
-                                <span class="text-sm text-[#4A5568]">IČO: 03225283</span>
-                            </div>
-                        </div>
-
-                        <!-- Telefon -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                <i class="fa-solid fa-phone"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Telefon</span>
-                                <a href="tel:+420721016678" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">+420 721 016 678</a>
-                            </div>
-                        </div>
-
-                        <!-- Email -->
-                        <div class="flex items-start gap-4">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
-                                <i class="fa-solid fa-envelope"></i>
-                            </div>
-                            <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">E-mail</span>
-                                <a href="mailto:katerina.cerna@konskydoktor.cz" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">katerina.cerna@konskydoktor.cz</a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Sociální sítě -->
-                    <div class="flex items-center gap-4 mt-8 pt-6 border-t border-[#2C3E50]/5">
-                        <span class="text-xs uppercase text-[#4A5568]/60 font-medium">Sledujte mě:</span>
-                        <div class="flex gap-3 relative z-10"> 
-                            <a href="https://www.facebook.com/vetchirocerna#" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
-                                <i class="fa-brands fa-facebook-f"></i>
-                            </a>
-                            <a href="https://www.instagram.com/p/DZb7soPlfgL/" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
-                                <i class="fa-brands fa-instagram"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
+    <section id="kontakt" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center max-w-2xl mx-auto space-y-4 mb-20">
+                <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Jak se se mnou spojit</span>
+                <h2 class="text-4xl font-bold text-[#2C3E50]">Objednání & Dotazy</h2>
+                <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
+                <p class="text-lg text-[#4A5568]">
+                    Pokud máte dotaz k ošetření nebo chcete rovnou rezervovat termín pro svého koně, neváhejte mě kontaktovat.
+                </p>
             </div>
 
-            <!-- Kontaktní formulář (Pravá strana) -->
-                    <div class="lg:col-span-7 bg-[#FAF9F6] p-8 rounded-3xl border border-[#2C3E50]/5 shadow-sm">
-                <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Nezávazná poptávka ošetření</h3>
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
                 
-                <!-- Formulář -->
-                <div class="contact-form-wrapper">
-                    <?php echo do_shortcode('[contact-form-7 id="698740d"]'); ?>
+                <!-- Informace a kontaktní údaje (Levá strana) -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div class="p-8 rounded-3xl bg-[#FAF9F6] border border-[#2C3E50]/5 space-y-6">
+                        <h3 class="text-2xl font-bold text-[#2C3E50] mb-4">Kontaktní údaje</h3>
+                        
+                        <div class="space-y-4 text-base text-[#4A5568]">
+                            <!-- Jméno a KVL -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                    <i class="fa-solid fa-user"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Lékařka</span>
+                                    <span class="block font-semibold text-[#2C3E50]">MVDr. Kateřina Černá</span>
+                                    <span class="text-sm text-[#4A5568]">KVL 6391</span>
+                                </div>
+                            </div>
+
+                            <!-- Adresa a IČO -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                    <i class="fa-solid fa-location-dot"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Sídlo</span>
+                                    <span class="block font-semibold text-[#2C3E50]">Riegrova 434</span>
+                                    <span class="block font-semibold text-[#2C3E50]">538 62 Hrochův Týnec</span>
+                                    <span class="text-sm text-[#4A5568]">IČO: 03225283</span>
+                                </div>
+                            </div>
+
+                            <!-- Telefon -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                    <i class="fa-solid fa-phone"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Telefon</span>
+                                    <a href="tel:+420721016678" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">+420 721 016 678</a>
+                                </div>
+                            </div>
+
+                            <!-- Email -->
+                            <div class="flex items-start gap-4">
+                                <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center text-lg mt-1 shrink-0">
+                                    <i class="fa-solid fa-envelope"></i>
+                                </div>
+                                <div>
+                                    <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">E-mail</span>
+                                    <a href="mailto:katerina.cerna@konskydoktor.cz" class="font-semibold text-[#2C3E50] hover:text-[#A3B18A] transition-soft">katerina.cerna@konskydoktor.cz</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Sociální sítě -->
+                        <div class="flex items-center gap-4 mt-8 pt-6 border-t border-[#2C3E50]/5">
+                            <span class="text-xs uppercase text-[#4A5568]/60 font-medium">Sledujte mě:</span>
+                            <div class="flex gap-3 relative z-10"> 
+                                <a href="https://www.facebook.com/vetchirocerna#" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
+                                    <i class="fa-brands fa-facebook-f"></i>
+                                </a>
+                                <a href="https://www.instagram.com/p/DZb7soPlfgL/" target="_blank" class="relative z-20 w-10 h-10 rounded-full bg-[#2C3E50]/5 text-[#2C3E50] flex items-center justify-center hover:bg-[#A3B18A] hover:text-white transition-soft">
+                                    <i class="fa-brands fa-instagram"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Kontaktní formulář (Pravá strana) -->
+                        <div class="lg:col-span-7 bg-[#FAF9F6] p-8 rounded-3xl border border-[#2C3E50]/5 shadow-sm">
+                    <h3 class="text-2xl font-bold text-[#2C3E50] mb-6">Nezávazná poptávka ošetření</h3>
+                    
+                    <!-- Formulář -->
+                    <div class="contact-form-wrapper">
+                        <?php echo do_shortcode('[contact-form-7 id="698740d"]'); ?>
+                    </div>
                 </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 <?php get_footer(); ?>
