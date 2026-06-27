@@ -48,7 +48,7 @@
                     <div class="absolute inset-0 border-2 border-[#A3B18A]/30 rounded-3xl translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
                     
                     <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-[#2C3E50]/5">
-                        <img src="https://konskydoktor.cz/wp-content/uploads/2021/10/kat_cerna-1.jpg" alt="Profilová fotografie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <img src="https://konskydoktor.cz/wp-content/uploads/2026/06/uvod.png" alt="Profilová fotografie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
                         <!-- Jemný stín pro lepší hloubku -->
                         <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/20 via-transparent to-transparent"></div>
                     </div>
