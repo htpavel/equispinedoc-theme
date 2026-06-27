@@ -11,295 +11,228 @@
     <a href="#kontakt" class="mobile-link text-2xl font-heading text-[#2C3E50] hover:text-[#A3B18A]">Kontakt</a>
 </div>
 
-<!-- 2. HERO SEKCE (PRVNÍ DOJEM) -->
-<section id="uvod" class="relative min-h-[85vh] flex items-center py-16 lg:py-24 bg-[#FAF9F6] overflow-hidden">
-    <!-- Jemné dekorační pozadí (organický kruh/blob pro vzdušnost) -->
-    <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[#A3B18A]/5 blur-3xl"></div>
-    <div class="absolute -bottom-40 right-10 w-96 h-96 rounded-full bg-[#A3B18A]/5 blur-3xl"></div>
+    <!-- 2. HERO SEKCE (PRVNÍ DOJEM) -->
+    <section id="uvod" class="relative min-h-[85vh] flex items-center py-16 lg:py-24 bg-[#FAF9F6] overflow-hidden">
+        <!-- Jemné dekorační pozadí (organický kruh/blob pro vzdušnost) -->
+        <div class="absolute -top-40 -left-40 w-96 h-96 rounded-full bg-[#A3B18A]/5 blur-3xl"></div>
+        <div class="absolute -bottom-40 right-10 w-96 h-96 rounded-full bg-[#A3B18A]/5 blur-3xl"></div>
 
-    <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
-        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
-            
-            <!-- Levý sloupec: Text a CTA -->
-            <div class="lg:col-span-7 space-y-8">
-                <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A3B18A]/10 text-[#2C3E50] text-sm font-medium">
-                    <span class="w-2 h-2 rounded-full bg-[#A3B18A] animate-pulse"></span>
-                    Mobilní chiropraxe & doplňkové metody pro koně
-                </div>
-                <h1 class="text-4xl md:text-6xl font-bold text-[#2C3E50] leading-tight">
-                    Holistická veterinární péče – <span class="italic text-[#A3B18A] font-normal">navrácení rovnováhy a pohybu</span>
-                </h1>
-                <p class="text-lg md:text-xl text-[#4A5568] leading-relaxed">
-                    Jmenuji se <strong>MVDr. Kateřina Černá</strong>. Specializuji se výhradně na veterinární chiropraxi a doplňkové rehabilitační metody. Přijedu za vaším koněm přímo do stáje, abychom v klidném a důvěrném prostředí podpořili jeho zdraví a výkonnost.
-                </p>
-                <div class="flex flex-col sm:flex-row gap-4 pt-4">
-                    <a href="#sluzby" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#A3B18A] text-white font-medium hover:bg-[#8F9F76] shadow-lg shadow-[#A3B18A]/20 transition-soft">
-                        Nabízené metody
-                    </a>
-                    <a href="#kontakt" class="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#2C3E50]/10 text-[#2C3E50] font-medium hover:bg-[#2C3E50]/5 transition-soft">
-                        Objednat ošetření
-                    </a>
-                </div>
-            </div>
-            
-            <!-- Pravý sloupec: Výrazný a stylový obrázek s rámečkem -->
-            <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
-                <!-- Dekorační rámeček za obrázkem -->
-                <div class="absolute inset-0 border-2 border-[#A3B18A]/30 rounded-3xl translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
+        <div class="max-w-7xl mx-auto px-6 w-full relative z-10">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16 items-center">
                 
-                <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-[#2C3E50]/5">
-                    <img src="https://konskydoktor.cz/wp-content/uploads/2021/10/kat_cerna-1.jpg" alt="Profilová fotografie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
-                    <!-- Jemný stín pro lepší hloubku -->
-                    <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/20 via-transparent to-transparent"></div>
-                </div>
-                
-                <!-- Plovoucí visačka s informací o dojezdu -->
-                <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-[#2C3E50]/5 hidden sm:flex items-center gap-3">
-                    <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center">
-                        <i class="fa-solid fa-truck-moving text-sm"></i>
+                <!-- Levý sloupec: Text a CTA -->
+                <div class="lg:col-span-7 space-y-8">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#A3B18A]/10 text-[#2C3E50] text-sm font-medium">
+                        <span class="w-2 h-2 rounded-full bg-[#A3B18A] animate-pulse"></span>
+                        Mobilní chiropraxe & doplňkové metody pro koně
                     </div>
-                    <div>
-                        <span class="block text-xs uppercase text-[#4A5568]/60 font-semibold">Dojíždím</span>
-                        <span class="text-xs font-bold text-[#2C3E50]">Po celé České republice</span>
+                    <h1 class="text-4xl md:text-6xl font-bold text-[#2C3E50] leading-tight">
+                        Holistická veterinární péče – <span class="italic text-[#A3B18A] font-normal">navrácení rovnováhy a pohybu</span>
+                    </h1>
+                    <p class="text-lg md:text-xl text-[#4A5568] leading-relaxed">
+                        Jmenuji se <strong>MVDr. Kateřina Černá</strong>. Specializuji se výhradně na veterinární chiropraxi a doplňkové rehabilitační metody. Přijedu za vaším koněm přímo do stáje, abychom v klidném a důvěrném prostředí podpořili jeho zdraví a výkonnost.
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 pt-4">
+                        <a href="#sluzby" class="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#A3B18A] text-white font-medium hover:bg-[#8F9F76] shadow-lg shadow-[#A3B18A]/20 transition-soft">
+                            Nabízené metody
+                        </a>
+                        <a href="#kontakt" class="inline-flex items-center justify-center px-8 py-4 rounded-full border-2 border-[#2C3E50]/10 text-[#2C3E50] font-medium hover:bg-[#2C3E50]/5 transition-soft">
+                            Objednat ošetření
+                        </a>
                     </div>
                 </div>
-            </div>
-            
-        </div>
-    </div>
-</section>
-
-<!-- 5.5 ČLÁNKY A AKTUALITY -->
-<section id="novinky" class="py-24 bg-white">
-    <div class="max-w-7xl mx-auto px-6">
-        <h2 class="text-4xl font-bold text-[#2C3E50] mb-12 text-center">Články z praxe & Aktuality</h2>
-        
-        <div class="swiper mySwiper">
-            <div class="swiper-wrapper">
-                <?php
-                $query = new WP_Query(['post_type' => 'post', 'posts_per_page' => 6]);
-                while ($query->have_posts()) : $query->the_post(); ?>
+                
+                <!-- Pravý sloupec: Výrazný a stylový obrázek s rámečkem -->
+                <div class="lg:col-span-5 relative group mt-8 lg:mt-0">
+                    <!-- Dekorační rámeček za obrázkem -->
+                    <div class="absolute inset-0 border-2 border-[#A3B18A]/30 rounded-3xl translate-x-4 translate-y-4 -z-10 transition-transform duration-500 group-hover:translate-x-2 group-hover:translate-y-2"></div>
                     
-                    <div class="swiper-slide h-auto p-2 overflow-visible"> 
-                        <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
-                            
-                            <!-- Horní část karty s obrázkem nebo náhodnou ikonou -->
-                            <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5 flex items-center justify-center">
-                                <?php if (has_post_thumbnail()) : ?>
-                                    <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
-                                <?php else : ?>
-                                    <?php 
-                                    // Definice rozšířeného pole ikon
-                                    $icons = [
-                                        'fa-notes-medical', 'fa-stethoscope', 'fa-paw', 'fa-heart-pulse', 
-                                        'fa-user-doctor', 'fa-bone', 'fa-horse', 'fa-briefcase-medical',
-                                        'fa-hand-holding-medical', 'fa-shield-dog'
-                                    ];
-                                    // Náhodný výběr
-                                    $random_icon = $icons[array_rand($icons)];
-                                    ?>
-                                    <i class="fa-solid <?php echo $random_icon; ?> text-5xl text-[#2C3E50]/10"></i>
-                                <?php endif; ?>
-                            </div>
-                            
-                            <!-- Odkaz na detail článku -->
-                            <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
-                                <div class="p-6">
-                                    <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
-                                        <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
-                                    </div>
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/5] bg-[#2C3E50]/5">
+                        <img src="https://konskydoktor.cz/wp-content/uploads/2021/10/kat_cerna-1.jpg" alt="Profilová fotografie" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105">
+                        <!-- Jemný stín pro lepší hloubku -->
+                        <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/20 via-transparent to-transparent"></div>
+                    </div>
+                    
+                    <!-- Plovoucí visačka s informací o dojezdu -->
+                    <div class="absolute -bottom-6 -left-6 bg-white p-4 rounded-2xl shadow-lg border border-[#2C3E50]/5 hidden sm:flex items-center gap-3">
+                        <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center">
+                            <i class="fa-solid fa-truck-moving text-sm"></i>
+                        </div>
+                        <div>
+                            <span class="block text-xs uppercase text-[#4A5568]/60 font-semibold">Dojíždím</span>
+                            <span class="text-xs font-bold text-[#2C3E50]">Po celé České republice</span>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+    </section>
 
-                                    <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
-                                        <?php the_title(); ?>
-                                    </h3>
-                                    
-                                    <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
-                                        <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
-                                    </p>
+    <!-- 5.5 ČLÁNKY A AKTUALITY -->
+    <section id="novinky" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6">
+            <h2 class="text-4xl font-bold text-[#2C3E50] mb-12 text-center">Články z praxe & Aktuality</h2>
+            
+            <div class="swiper mySwiper">
+                <div class="swiper-wrapper">
+                    <?php
+                    $query = new WP_Query(['post_type' => 'post', 'posts_per_page' => 6]);
+                    while ($query->have_posts()) : $query->the_post(); ?>
+                        
+                        <div class="swiper-slide h-auto p-2 overflow-visible"> 
+                            <div class="relative bg-[#FAF9F6] rounded-3xl overflow-hidden border border-[#2C3E50]/5 h-full flex flex-col transition-soft hover:scale-[1.03] hover:shadow-2xl hover:z-50">
+                                
+                                <!-- Horní část karty s obrázkem nebo náhodnou ikonou -->
+                                <div class="aspect-video relative overflow-hidden bg-[#2C3E50]/5 flex items-center justify-center">
+                                    <?php if (has_post_thumbnail()) : ?>
+                                        <?php the_post_thumbnail('large', ['class' => 'w-full h-full object-cover transition-transform duration-500 hover:scale-105']); ?>
+                                    <?php else : ?>
+                                        <?php 
+                                        // Definice rozšířeného pole ikon
+                                        $icons = [
+                                            'fa-notes-medical', 'fa-stethoscope', 'fa-paw', 'fa-heart-pulse', 
+                                            'fa-user-doctor', 'fa-bone', 'fa-horse', 'fa-briefcase-medical',
+                                            'fa-hand-holding-medical', 'fa-shield-dog'
+                                        ];
+                                        // Náhodný výběr
+                                        $random_icon = $icons[array_rand($icons)];
+                                        ?>
+                                        <i class="fa-solid <?php echo $random_icon; ?> text-5xl text-[#2C3E50]/10"></i>
+                                    <?php endif; ?>
                                 </div>
                                 
-                                <div class="px-6 pb-6 mt-auto">
-                                    <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
-                                        Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
-                                    </span>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
+                                <!-- Odkaz na detail článku -->
+                                <a href="<?php the_permalink(); ?>" class="flex flex-col justify-between flex-grow">
+                                    <div class="p-6">
+                                        <div class="text-xs text-[#A3B18A] font-semibold uppercase tracking-wider mb-2 flex items-center">
+                                            <i class="fa-regular fa-calendar mr-1"></i> <?php echo get_the_date('d. F Y'); ?>
+                                        </div>
 
-                <?php endwhile; wp_reset_postdata(); ?>
+                                        <h3 class="text-xl font-bold text-[#2C3E50] font-heading leading-snug">
+                                            <?php the_title(); ?>
+                                        </h3>
+                                        
+                                        <p class="text-sm text-[#4A5568] mt-2 leading-relaxed">
+                                            <?php echo wp_trim_words(get_the_excerpt(), 20); ?>
+                                        </p>
+                                    </div>
+                                    
+                                    <div class="px-6 pb-6 mt-auto">
+                                        <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#A3B18A] hover:text-[#8F9F76] transition-soft">
+                                            Číst více <i class="fa-solid fa-arrow-right text-xs"></i>
+                                        </span>
+                                    </div>
+                                </a>
+                            </div>
+                        </div>
+
+                    <?php endwhile; wp_reset_postdata(); ?>
+                </div>
+                
+                <!-- Swiper navigace -->
+                <div class="swiper-button-next !text-[#A3B18A]"></div>
+                <div class="swiper-button-prev !text-[#A3B18A]"></div>
             </div>
-            
-            <!-- Swiper navigace -->
-            <div class="swiper-button-next !text-[#A3B18A]"></div>
-            <div class="swiper-button-prev !text-[#A3B18A]"></div>
         </div>
-    </div>
-</section>
+    </section>
 
     <!-- 3. O MNĚ & KVALIFIKACE (TABY) -->
-    <section id="o-mne-sekce" class="py-24 bg-white">
-        <div class="max-w-7xl mx-auto px-6">
-            <div class="text-center max-w-2xl mx-auto space-y-4 mb-16">
-                <span class="text-xs font-semibold uppercase tracking-wider text-[#A3B18A]">Osobní a odborný profil</span>
-                <h2 class="text-4xl font-bold text-[#2C3E50]">MVDr. Kateřina Černá</h2>
-                <div class="w-16 h-1 bg-[#A3B18A] mx-auto rounded-full"></div>
-            </div>
-
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                
-                <!-- Levý sloupec: Foto & Rychlé shrnutí -->
-                <div class="lg:col-span-4 space-y-8 lg:sticky lg:top-28">
-                    <div class="relative rounded-3xl overflow-hidden shadow-xl aspect-[4/5] bg-[#2C3E50]/5">
-                        <img src="https://images.unsplash.com/photo-1553284965-83fd3e82fa5a?auto=format&fit=crop&q=80&w=800" alt="MVDr. Kateřina Černá" class="w-full h-full object-cover">
-                        <div class="absolute inset-0 bg-gradient-to-t from-[#2C3E50]/60 via-transparent to-transparent"></div>
-                        <div class="absolute bottom-6 left-6 right-6 text-white text-center">
-                            <span class="text-xs uppercase tracking-widest text-[#A3B18A] font-semibold">Veterinární lékařka</span>
-                            <h3 class="text-2xl font-bold font-heading text-white mt-1">MVDr. Kateřina Černá</h3>
+    <section id="o-mne" class="py-24 bg-white">
+        <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-12 gap-12">
+            
+            <!-- Levý sloupec -->
+            <div class="md:col-span-4">
+                <div class="sticky top-24">
+                    <div class="bg-[#2C3E50] rounded-3xl overflow-hidden shadow-xl mb-6">
+                        <img src="https://konskydoktor.cz/wp-content/uploads/2021/10/kat_cerna-1.jpg" alt="MVDr. Kateřina Černá" class="w-full h-auto object-cover opacity-90">
+                        <div class="p-6 text-white text-center">
+                            <p class="text-sm uppercase tracking-widest opacity-80 mb-2">Veterinární lékařka</p>
+                            <h2 class="text-2xl font-bold">MVDr. Kateřina Černá</h2>
                         </div>
                     </div>
                     
-                    <!-- Rychlá fakta -->
-                    <div class="bg-[#FAF9F6] p-6 rounded-2xl border border-[#2C3E50]/5 space-y-4">
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center">
-                                <i class="fa-solid fa-graduation-cap"></i>
-                            </div>
+                    <div class="bg-[#FAF9F6] p-6 rounded-3xl border border-[#2C3E50]/5">
+                        <div class="flex items-center gap-4 mb-4">
+                            <span class="text-2xl text-[#2C3E50]">🎓</span>
                             <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Absolventka</span>
-                                <span class="text-sm font-semibold text-[#2C3E50]">FVL VFU Brno (2014)</span>
+                                <p class="text-xs text-gray-500 uppercase">Absolventka</p>
+                                <p class="font-bold text-[#2C3E50]">FVL VFU Brno (2014)</p>
                             </div>
                         </div>
-                        <div class="flex items-center gap-3">
-                            <div class="w-10 h-10 rounded-full bg-[#A3B18A]/10 text-[#A3B18A] flex items-center justify-center">
-                                <i class="fa-solid fa-award"></i>
-                            </div>
+                        <div class="flex items-center gap-4">
+                            <span class="text-2xl text-[#2C3E50]">🏅</span>
                             <div>
-                                <span class="block text-xs uppercase text-[#4A5568]/60 font-medium">Certifikace</span>
-                                <span class="text-sm font-semibold text-[#2C3E50]">CERP, IAVC, CEKTT</span>
+                                <p class="text-xs text-gray-500 uppercase">Certifikace</p>
+                                <p class="font-bold text-[#2C3E50]">CERP, IAVC, CEKTT</p>
                             </div>
                         </div>
                     </div>
                 </div>
+            </div>
 
-                <!-- Pravý sloupec: Interaktivní přepínání O mně / Kvalifikace -->
-                <div class="lg:col-span-8 space-y-8">
-                    <!-- Navigace záložek -->
-                    <div class="flex border-b border-[#2C3E50]/10 gap-8">
-                        <button id="btn-tab-omne" class="pb-4 text-xl font-bold font-heading border-b-2 border-[#A3B18A] text-[#2C3E50] transition-soft focus:outline-none">
-                            O mně
-                        </button>
-                        <button id="btn-tab-kvalifikace" class="pb-4 text-xl font-bold font-heading border-b-2 border-transparent text-[#4A5568]/50 hover:text-[#2C3E50] transition-soft focus:outline-none">
-                            Moje kvalifikace & Certifikace
-                        </button>
-                    </div>
-
-                    <!-- Obsah záložky: O mně -->
-                    <div id="content-tab-omne" class="space-y-6 text-lg text-[#4A5568] leading-relaxed">
-                        <h3 class="text-2xl font-bold text-[#2C3E50]">Pár slov o mně</h3>
-                        <p>
-                            Dobrý den, dovolte mi se představit. Jmenuji se <strong>Kateřina Černá</strong> a jsem veterinární lékařka se zaměřením na medicínu koní, Certified Equine Rehabilitation Practitioner (CERP), IAVC Certifikovaná Chiropraktička pro Koně a Psy a Certified Equine Kinesiology Taping Therapist (CEKTT).
-                        </p>
-                        <p>
-                            Můj život je spjatý s koňmi už od útlého dětství. Začalo to návštěvami turistických jízdáren, hřebčínů, či jakékoli ohrady s koňmi během výletů. Dále to pokračovalo vstupem do jezdeckého oddílu a brzy na to zahájením aktivních účastí parkurových soutěží. A nakonec to vyvrcholilo v roce 2014, kdy jsem promovala na Fakultě veterinárního lékařství VFU Brno a začala se naplno věnovat medicíně zaměřené na koně.
-                        </p>
-                        <p>
-                            Zpočátku jsem pracovala jako terénní veterinární lékař pro koně. Později jsem k tomu přidala práci externího veterinární lékaře na Veterinární klinice Heřmanův Městec, kde jsem získala spoustu důležitých zkušeností se složitými akutními případy. Mimoto jsem se neustále vzdělávala absolvováním bezpočtu odborných seminářů pořádaných Komorou veterinárních lékařů ČR, Českou hipiatrickou společností, EDUvet, Doc. MVDr. B. Bezděkovou Ph.D., Dip. ECEIM.
-                        </p>
-                        <p>
-                            Mou kariéru na několik let zbrzdily mateřské povinnosti, během kterých jsem si stále více uvědomovala, že nejsem zcela spokojená s konceptem péče poskytovaným v minulých letech. Na konci mateřské jsem se proto rozhodla absolvovat IAVC Essentials of Veterinary Chiropractic Course v Německu zakončené získáním mezinárodního certifikátu. Tento kurz mě, kromě nesmírně účinné manuální metody chiropraxe, naučil holistickému přístupu k pacientovi, který jsem do té doby velmi postrádala.
-                        </p>
-                        <p>
-                            Vstup do světa celostního přístupu k pacientovi mě velmi motivoval k dalšímu rozvíjení vzdělání a dovedností v tomto odvětví. Na získání mezinárodního certifikátu z chiropraxe jsem proto navázala v roce 2022 získáním titulu CEKTT (Certified Equine Kinesiology Taping Therapist) a v roce 2025 titulu CERP (Certified Equine Rehabilitation Practitioner).
-                        </p>
-                        
-                        <div class="p-6 rounded-2xl bg-[#FAF9F6] border-l-4 border-[#A3B18A] italic my-6 text-base space-y-4">
-                            <p>
-                                „Mým cílem při péči o pacienta je kombinovat veškeré léčebné nástroje, které jsem se během let naučila používat, v případě potřeby úzce spolupracovat s odborníky z oblasti ortopedie či interní medicíny, a následně nalézt nejvhodnější terapeutický plán, který povede k co možná nejvýraznějšímu zmírnění či úplnému vyřešení potíží pacienta a spokojenosti majitele.“
-                            </p>
-                            <p>
-                                „Zakládám si na klidném přístupu ke zvířeti, protože dle mého názoru jen klidné a pokud možno důvěřující zvíře je schopné s námi spolupracovat na nejlepším výsledku léčby.“
-                            </p>
+            <!-- Pravý sloupec -->
+            <div class="md:col-span-8">
+                <h2 class="text-3xl font-bold text-[#2C3E50] mb-8">Moje kvalifikace & Certifikace</h2>
+                
+                <div class="space-y-4">
+                    <div class="bg-[#FAF9F6] p-6 rounded-xl border border-[#2C3E50]/10 flex gap-4 items-start">
+                        <span class="text-3xl text-[#2C3E50]">🎓</span>
+                        <div>
+                            <h3 class="font-bold text-[#2C3E50]">2025 CERP – Certified Equine Rehabilitation Practitioner</h3>
+                            <p class="text-sm text-[#4A5568]">Mezinárodně uznávaná certifikace pro rehabilitaci a fyzikální terapii koní zastřešená University of Tennessee (USA) a mezinárodní akademií.</p>
                         </div>
-
-                        <p class="font-medium text-[#2C3E50]">
-                            Jsem perfekcionistka. Proto nikdy od pacienta neodcházím dříve, než se podaří dosáhnout nejlepšího možného výsledku pro konkrétního koně v tu danou chvíli. Můj přístup je unikátní a také časově i fyzicky náročný, což se odráží na ceně mojí práce.
-                        </p>
                     </div>
 
-                    <!-- Obsah záložky: Kvalifikace -->
-                    <div id="content-tab-kvalifikace" class="hidden space-y-8">
-                        <h3 class="text-2xl font-bold text-[#2C3E50]">Odborné vzdělání a získané tituly</h3>
-                        
-                        <div class="space-y-6">
-                            <!-- CERP -->
-                            <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#2C3E50]/5 hover:shadow-md transition-soft flex gap-4">
-                                <div class="text-[#A3B18A] text-3xl pt-1">
-                                    <i class="fa-solid fa-graduation-cap"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">2025</span>
-                                        <h4 class="text-lg font-bold text-[#2C3E50]">CERP – Certified Equine Rehabilitation Practitioner</h4>
-                                    </div>
-                                    <p class="text-sm text-[#4A5568]">
-                                        Mezinárodně uznávaná certifikace pro rehabilitaci a fyzikální terapii koní zastřešená University of Tennessee (USA) a mezinárodní akademií.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="bg-[#FAF9F6] p-6 rounded-xl border border-[#2C3E50]/10 flex gap-4 items-start">
+                        <span class="text-3xl text-[#2C3E50]">🌿</span>
+                        <div>
+                            <h3 class="font-bold text-[#2C3E50]">2022 CEKTT – Certified Equine Kinesiology Taping Therapist</h3>
+                            <p class="text-sm text-[#4A5568]">Specializovaný výcvik a certifikace pro aplikaci elastických kineziotapů přizpůsobených specifické anatomii a biomechanice koní.</p>
+                        </div>
+                    </div>
 
-                            <!-- CEKTT -->
-                            <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#2C3E50]/5 hover:shadow-md transition-soft flex gap-4">
-                                <div class="text-[#A3B18A] text-3xl pt-1">
-                                    <i class="fa-solid fa-certificate"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">2022</span>
-                                        <h4 class="text-lg font-bold text-[#2C3E50]">CEKTT – Certified Equine Kinesiology Taping Therapist</h4>
-                                    </div>
-                                    <p class="text-sm text-[#4A5568]">
-                                        Specializovaný výcvik a certifikace pro aplikaci elastických kineziotapů přizpůsobených specifické anatomii a biomechanice koní.
-                                    </p>
-                                </div>
-                            </div>
+                    <div class="bg-[#FAF9F6] p-6 rounded-xl border border-[#2C3E50]/10 flex gap-4 items-start">
+                        <span class="text-3xl text-[#2C3E50]">🩺</span>
+                        <div>
+                            <h3 class="font-bold text-[#2C3E50]">2021 IAVC Certifikovaná Chiropraktička pro Koně a Psy</h3>
+                            <p class="text-sm text-[#4A5568]">IAVC Essentials of Veterinary Chiropractic Course zakončený úspěšnou mezinárodní zkouškou. Celostní přístup, diagnostika funkčních blokád páteře a šetrná manuální náprava.</p>
+                        </div>
+                    </div>
 
-                            <!-- IAVC -->
-                            <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#2C3E50]/5 hover:shadow-md transition-soft flex gap-4">
-                                <div class="text-[#A3B18A] text-3xl pt-1">
-                                    <i class="fa-solid fa-stethoscope"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">2021</span>
-                                        <h4 class="text-lg font-bold text-[#2C3E50]">IAVC Certifikovaná Chiropraktička pro Koně a Psy</h4>
-                                    </div>
-                                    <p class="text-sm text-[#4A5568]">
-                                        IAVC Essentials of Veterinary Chiropractic Course zakončený úspěšnou mezinárodní zkouškou. Celostní přístup, diagnostika funkčních blokád páteře a šetrná manuální náprava.
-                                    </p>
-                                </div>
-                            </div>
-
-                            <!-- FVL VFU Brno -->
-                            <div class="p-6 rounded-2xl bg-[#FAF9F6] border border-[#2C3E50]/5 hover:shadow-md transition-soft flex gap-4">
-                                <div class="text-[#A3B18A] text-3xl pt-1">
-                                    <i class="fa-solid fa-university"></i>
-                                </div>
-                                <div class="space-y-2">
-                                    <div class="flex items-center gap-3 flex-wrap">
-                                        <span class="px-2 py-0.5 rounded text-xs bg-[#A3B18A]/10 text-[#A3B18A] font-semibold">2014</span>
-                                        <h4 class="text-lg font-bold text-[#2C3E50]">Veterinární lékařství – FVL VFU Brno</h4>
-                                    </div>
-                                    <p class="text-sm text-[#4A5568]">
-                                        Řádné šestileté doktorské studium na Fakultě veterinárního lékařství se zaměřením na koňskou medicínu.
-                                    </p>
-                                </div>
-                            </div>
-
+                    <div class="bg-[#FAF9F6] p-6 rounded-xl border border-[#2C3E50]/10 flex gap-4 items-start">
+                        <span class="text-3xl text-[#2C3E50]">🏛️</span>
+                        <div>
+                            <h3 class="font-bold text-[#2C3E50]">2014 Veterinární lékařství – FVL VFU Brno</h3>
+                            <p class="text-sm text-[#4A5568]">Řádné šestileté doktorské studium na Fakultě veterinárního lékařství se zaměřením na koňskou medicínu.</p>
                         </div>
                     </div>
                 </div>
 
+                <!-- Rozbalovací seznam -->
+                <div class="mt-8">
+                    <details class="group bg-[#FAF9F6] border border-[#2C3E50]/10 rounded-xl overflow-hidden transition-all">
+                        <summary class="list-none p-5 cursor-pointer text-[#2C3E50] font-bold flex justify-between items-center hover:bg-[#2C3E50]/5">
+                            <span class="flex items-center gap-3">
+                                <i class="fa-solid fa-list-ul"></i> Zobrazit kompletní historii vzdělávání a seminářů
+                            </span>
+                            <span class="group-open:rotate-180 transition-transform">▼</span>
+                        </summary>
+                        <div class="p-5 border-t border-[#2C3E50]/10 text-sm text-[#4A5568] space-y-3">
+                            <p><strong>2026</strong> – STECCO Animal Fascial Manipulation Level 1, Varšava</p>
+                            <p><strong>2026</strong> – New Developments in Diagnostic and Therapeutic Techniques of Equine Neck Conditions, VetPD</p>
+                            <p><strong>2025</strong> – SURE FOOT Practitioner (Level 1) & Workshop SUREFOOT podložek</p>
+                            <p><strong>2025</strong> – Tensegrální Trénink (Tina Hau), Kněžmost</p>
+                            <p><strong>2025</strong> – ABnR Equine – Myofascial Triggerpoint and Pain Release, Německo</p>
+                            <p><strong>2024</strong> – The Canine 10-Step Myofascial Treatment Approach (IAVC) & Praktická Neurologie u Koní</p>
+                            <p><strong>2024</strong> – Myofascial Kinetic Lines in Horses and Dogs (IAVC)</p>
+                            <p><strong>2023</strong> – Výroční seminář ČEHIS: Diagnostika kulhání, Seč</p>
+                            <p><strong>2023</strong> – STAMMER©KINESTICS: Equine Functional Movement Analyses (IAVC)</p>
+                            <p><strong>2023</strong> – Training the Equine Athlete (IAVC) & ABnR – The Art and Science of Spinal Manipulation</p>
+                            <p><strong>2022</strong> – Horse, Saddle and Rider Interactions (IAVC), Německo</p>
+                        </div>
+                    </details>
+                </div>
             </div>
         </div>
     </section>
